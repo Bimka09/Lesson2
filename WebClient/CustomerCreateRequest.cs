@@ -4,18 +4,22 @@ namespace WebClient
     {
         public CustomerCreateRequest()
         {
-        }
 
-        public CustomerCreateRequest(
-            string firstName,
-            string lastName)
+        }
+        public CustomerCreateRequest(long Id, string firstName, string middleName, 
+                                        string lastName, string mail)
         {
-            Firstname = firstName;
-            Lastname = lastName;
+            id = Id;
+            first_name = firstName;
+            middle_name = middleName;
+            last_name = lastName;
+            email = mail;
         }
 
-        public string Firstname { get; set; }
-
-        public string Lastname { get; set; }
+        public long id { get; init; }
+        public string first_name { get; init; }
+        public string last_name { get; init; }
+        public string middle_name { get; init; }
+        public string email { get; init; }
     }
 }
